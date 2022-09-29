@@ -5,7 +5,7 @@ import React from "react";
 
 export default function UserProfile() {
   return (
-    <div className="bg-gray-100 right-0">
+    <div className=" right-0">
       <div className="p-6 flex items-center">
         <div className="w-8  mr-4 ">
           <img
@@ -25,7 +25,7 @@ export default function UserProfile() {
         </div>
       </div>
 
-      <div className="flex items-center p-2  justify-between  bg-gray-100 ">
+      <div className="flex items-center p-2  justify-between   ">
         <div>
           <p className="text-xs">85 KG</p>
           <p className="text-xs">Weight</p>
@@ -39,6 +39,7 @@ export default function UserProfile() {
           <p className="text-xs">Age</p>
         </div>
       </div>
+      <div className="h-px my-1 bg-black"></div>
     </div>
   );
 }

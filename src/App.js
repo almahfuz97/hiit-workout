@@ -6,6 +6,7 @@ import Homepage from "./components/Homepage";
 function App() {
   return (
     <div className=" bg-gray-50 ">
+      <Header />
       <Homepage />
     </div>
   );

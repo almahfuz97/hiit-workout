@@ -15,17 +15,22 @@ export default function Details({
     toast("Congratulations! You have completed your workout");
   };
   return (
-    <div className="w-full  h-full bg-white ">
+    <div className="w-full bg-red-100 p-2 rounded-md drop-shadow shadow-lg">
       <UserProfile />
+
       <BreakTime handleBreakTimeClick={handleBreakTimeClick} />
+
       <ExerciseDetails exerciseTime={exerciseTime} breakTime={breakTime} />
-      <button
-        onClick={showToast}
-        className="border bg-white shadow-md shadow-pink-300 justify-center px-2 py-2 inline-block text-xs text-pink-500 mt-4 bg-transparent rounded-md hover:bg-slate-50"
-      >
-        {" "}
-        Activity Completed
-      </button>
+
+      <div className="flex justify-center mb-4">
+        <button
+          onClick={showToast}
+          className="border bg-white shadow-md shadow-pink-300 justify-center px-2 py-2 inline-block text-xs text-pink-500 mt-4 bg-transparent rounded-md hover:bg-slate-50 "
+        >
+          {" "}
+          Activity Completed
+        </button>
+      </div>
       <ToastContainer />
     </div>
   );

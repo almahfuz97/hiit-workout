@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { addToDb, getFromDb } from "../fakedb";
-import Details from "./Details";
+import Details from "./Details/Details";
 import Header from "./Header/Header";
 import WorkoutCard from "./WorkoutCard";
 
@@ -36,27 +36,32 @@ export default function Homepage() {
   };
 
   return (
-    <div className=" grid grid-cols-12">
-      <div className=" col-span-8 md:col-span-9   m-16">
-        <Header />
-        <h2 className=" text-2xl font-semibold mt-10">Select Workouts</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {workouts.map((workout) => (
-            <WorkoutCard
-              key={workout.id}
-              workout={workout}
-              handleAddClick={handleAddClick}
-            />
-          ))}
+    <>
+      <h2 className=" text-2xl font-semibold px-5 mt-10">
+        Your Daily Workouts
+      </h2>
+
+      <div className="flex flex-col-reverse md:grid md:grid-cols-12 ">
+        <div className=" md:col-span-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-5">
+            {workouts.map((workout) => (
+              <WorkoutCard
+                key={workout.id}
+                workout={workout}
+                handleAddClick={handleAddClick}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className=" md:col-span-4 p-5 mt-8">
+          <Details
+            exerciseTime={exerciseTime}
+            handleBreakTimeClick={handleBreakTimeClick}
+            breakTime={breakTime}
+          />
         </div>
       </div>
-      <div className="col-span-4 md:col-span-3">
-        <Details
-          exerciseTime={exerciseTime}
-          handleBreakTimeClick={handleBreakTimeClick}
-          breakTime={breakTime}
-        />
-      </div>
-    </div>
+    </>
   );
 }
