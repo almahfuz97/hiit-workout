@@ -15,7 +15,7 @@ export default function Details({
     toast("Congratulations! You have completed your workout");
   };
   return (
-    <div className="w-full bg-red-100 p-2 rounded-md drop-shadow shadow-lg">
+    <div className="w-full bg-red-100  p-2 rounded-md drop-shadow shadow-lg">
       <UserProfile />
 
       <BreakTime handleBreakTimeClick={handleBreakTimeClick} />

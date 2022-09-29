@@ -4,15 +4,15 @@ import { faCoffee, faDumbbell } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   return (
-    <div className="flex items-center">
+    <nav className="flex items-center p-6">
       <FontAwesomeIcon
         icon={faDumbbell}
         size="2x"
-        className=" text-pink-600 mr-4"
+        className=" text-red-400 mr-4"
       />
-      <h1 className=" text-xl font-semibold text-pink-600">
+      <h1 className=" text-xl font-semibold text-red-400">
         High-Intensive-Interval-Training
       </h1>
-    </div>
+    </nav>
   );
 }
