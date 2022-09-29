@@ -1,0 +1,45 @@
+[
+    {
+      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ea",
+      "name": "Burpee",
+      "time": 40,
+      "description": "You have to keep up the intensity. Do not start the next workout before finishing this 40seconds",
+      "img": "https://media.istockphoto.com/photos/burpees-outside-at-the-playground-picture-id907915300?b=1&k=20&m=907915300&s=170667a&w=0&h=c_Q27VnKTakPkykjqZb9sPNl_DZgUiDmjPHKgtd9wFM="
+    },
+    {
+      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6eb",
+      "name": "Mountain Climber",
+      "time": 40,
+      "description": "You have to keep up the intensity. Do not start the next workout before finishing this 40seconds",
+      "img": "https://media.istockphoto.com/photos/sportsman-practicing-mountain-climbing-exercise-picture-id1311464336?b=1&k=20&m=1311464336&s=170667a&w=0&h=GbxsFNrLDG9pG9-Ce3dXNrqbf7w5vGbnyLnn3VTQpNg="
+    },
+    {
+      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6eac",
+      "name": "Plank",
+      "time": 40,
+      "description": "You have to keep up the intensity. Do not start the next workout before finishing this 40seconds",
+      "img": "https://media.istockphoto.com/photos/how-long-can-you-hold-a-plank-picture-id484942652?b=1&k=20&m=484942652&s=170667a&w=0&h=Fam38wCuC6uSFI7sdjGKx2mFROkBvQMQDrugm2rvjwo="
+    },
+    {
+      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ed",
+      "name": "Push-Up",
+      "time": 40,
+      "description": "You have to keep up the intensity. Do not start the next workout before finishing this 40seconds",
+      "img": "https://media.istockphoto.com/photos/man-doing-pushup-exercise-during-home-workout-picture-id1297482213?b=1&k=20&m=1297482213&s=170667a&w=0&h=u0zeE950jvmIysfyPQQCSHbrWDrcnrzqn7vNBtZqkzk="
+    },
+    {
+      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ee",
+      "name": "Jumping Jack",
+      "time": 40,
+      "description": "You have to keep up the intensity. Do not start the next workout before finishing this 40seconds",
+      "img": "https://media.istockphoto.com/photos/high-intensity-interval-training-at-home-picture-id1340405016?b=1&k=20&m=1340405016&s=170667a&w=0&h=WnXMfIzwlSfvVHdx4gU9-iHaNYRPEmobc5ZBsAB5hN0="
+    },
+    {
+      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ef",
+      "name": "Squat",
+      "time": 40,
+      "description": "You have to keep up the intensity. Do not start the next workout before finishing this 40seconds",
+      "img": "https://media.istockphoto.com/photos/mature-man-squatting-at-home-picture-id1332112356?b=1&k=20&m=1332112356&s=170667a&w=0&h=Gw6iRu9lXorZ-8ZjT4wdZokO93Xk7cQdG_wX20w2P9c="
+    }
+    
+]
