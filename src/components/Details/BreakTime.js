@@ -4,7 +4,7 @@ export default function BreakTime({ handleBreakTimeClick }) {
   return (
     <div className="mt-10">
       <h1>Add a break time</h1>
-      <div className="flex justify-between p-4 bg-purple-100 drop-shadow-sm mt-2 rounded">
+      <div className="flex justify-between p-4 bg-purple-100 drop-shadow-sm mt-2 rounded-lg">
         <button
           onClick={() => handleBreakTimeClick(10)}
           className="mr-2 rounded-full bg-red-100 text-red-500 drop-shadow p-2 text-sm hover:bg-slate-100 "

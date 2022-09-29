@@ -27,16 +27,16 @@ export default function UserProfile() {
 
       <div className="flex items-center p-2  justify-between   ">
         <div>
-          <p className="text-xs">85 KG</p>
-          <p className="text-xs">Weight</p>
+          <p className="text-xs mb-2">85 KG</p>
+          <p className="text-xs opacity-50">Weight</p>
         </div>
         <div>
-          <p className="text-xs">5.11 ft</p>
-          <p className="text-xs">Height</p>
+          <p className="text-xs mb-2">5.11 ft</p>
+          <p className="text-xs opacity-50">Height</p>
         </div>
         <div>
-          <p className="text-xs">25y</p>
-          <p className="text-xs">Age</p>
+          <p className="text-xs mb-2">25y</p>
+          <p className="text-xs opacity-50">Age</p>
         </div>
       </div>
       <div className="h-px my-1 bg-black"></div>
