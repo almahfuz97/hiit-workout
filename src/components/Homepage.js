@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { addToDb, getFromDb } from "../fakedb";
 import Details from "./Details";
 import Header from "./Header/Header";
 import WorkoutCard from "./WorkoutCard";
@@ -17,9 +18,11 @@ export default function Homepage() {
       .catch((err) => console.log(err));
   }, []);
 
+  useEffect(() => {
+    setBreakTime(getFromDb());
+  }, []);
   // handle add workout button click
   const handleAddClick = (workout) => {
-    // console.log(id);
     setexerciseTime((prevexerciseTime) => {
       return prevexerciseTime + workout.time;
     });
@@ -29,7 +32,9 @@ export default function Homepage() {
   const handleBreakTimeClick = (seconds) => {
     console.log(seconds);
     setBreakTime(seconds);
+    addToDb(seconds);
   };
+
   return (
     <div className=" grid grid-cols-12">
       <div className=" col-span-8 md:col-span-9   m-16">
