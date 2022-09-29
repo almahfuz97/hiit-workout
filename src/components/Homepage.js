@@ -5,7 +5,8 @@ import WorkoutCard from "./WorkoutCard";
 
 export default function Homepage() {
   const [workouts, setWorkouts] = useState([]);
-  const [time, setTime] = useState(0);
+  const [exerciseTime, setexerciseTime] = useState(0);
+  const [breakTime, setBreakTime] = useState(0);
 
   useEffect(() => {
     fetch("workouts.json")
@@ -19,11 +20,16 @@ export default function Homepage() {
   // handle add workout button click
   const handleAddClick = (workout) => {
     // console.log(id);
-    setTime((prevTime) => {
-      return prevTime + workout.time;
+    setexerciseTime((prevexerciseTime) => {
+      return prevexerciseTime + workout.time;
     });
   };
 
+  // handle breaktime click button
+  const handleBreakTimeClick = (seconds) => {
+    console.log(seconds);
+    setBreakTime(seconds);
+  };
   return (
     <div className=" grid grid-cols-12">
       <div className=" col-span-8 md:col-span-9   m-16">
@@ -40,7 +46,11 @@ export default function Homepage() {
         </div>
       </div>
       <div className="col-span-4 md:col-span-3">
-        <Details time={time} />
+        <Details
+          exerciseTime={exerciseTime}
+          handleBreakTimeClick={handleBreakTimeClick}
+          breakTime={breakTime}
+        />
       </div>
     </div>
   );
