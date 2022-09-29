@@ -4,6 +4,7 @@ import React from "react";
 
 export default function WorkoutCard({ workout, handleAddClick }) {
   const { img, name, description, time } = workout;
+
   return (
     <div className="border rounded-lg bg-white-50 drop-shadow shadow-lg mt-8">
       <img className=" rounded-t-lg w-full" src={img} alt="Workout Image" />

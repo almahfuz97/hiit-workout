@@ -10,6 +10,7 @@ export default function Homepage() {
   const [breakTime, setBreakTime] = useState(0);
   const [quesAns, setQuesAns] = useState([]);
 
+  // load workout data
   useEffect(() => {
     fetch("workouts.json")
       .then((res) => res.json())
@@ -19,11 +20,12 @@ export default function Homepage() {
       .catch((err) => console.log(err));
   }, []);
 
+  // get break time from localstorage
   useEffect(() => {
     setBreakTime(getFromDb());
   }, []);
 
-  // questions and answer
+  // questions and answer data load
   useEffect(() => {
     fetch("questions.json")
       .then((res) => res.json())
@@ -33,7 +35,7 @@ export default function Homepage() {
       .catch((err) => console.log(err));
   }, []);
 
-  // handle add workout button click
+  // handle add-workout button click
   const handleAddClick = (workout) => {
     setexerciseTime((prevexerciseTime) => {
       return prevexerciseTime + workout.time;
@@ -74,6 +76,7 @@ export default function Homepage() {
           />
         </div>
       </div>
+
       <div className="flex justify-center mt-16 mb-10">
         <p className="px-5 py-3 border rounded-lg shadow shadow-red-300 drop-shadow text-red-400">
           Questions
