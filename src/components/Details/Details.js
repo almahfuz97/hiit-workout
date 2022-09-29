@@ -14,6 +14,7 @@ export default function Details({
   const showToast = () => {
     toast("Congratulations! You have completed your workout");
   };
+
   return (
     <div className="w-full bg-red-100  p-2 rounded-md drop-shadow shadow-lg">
       <UserProfile />
