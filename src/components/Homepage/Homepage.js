@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { addToDb, getFromDb } from "../../fakedb";
+import { addToDb, getFromDb } from "../../utilities/fakedb";
 import Details from "../Details/Details";
 import Questions from "../Questions/Questions";
 import WorkoutCard from "../WorkoutCard/WorkoutCard";
