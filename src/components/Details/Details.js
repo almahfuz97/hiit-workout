@@ -25,7 +25,7 @@ export default function Details({
       <div className="flex justify-center mb-4">
         <button
           onClick={showToast}
-          className="border bg-white shadow-md shadow-pink-300 justify-center px-2 py-2 inline-block text-xs text-pink-500 mt-4 bg-transparent rounded-md hover:bg-slate-50 "
+          className="border bg-white shadow-md shadow-pink-300 justify-center px-2 py-2 inline-block text-xs text-pink-500 mt-4 bg-transparent rounded-md hover:bg-purple-100 "
         >
           {" "}
           Activity Completed

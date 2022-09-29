@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { addToDb, getFromDb } from "../fakedb";
-import Details from "./Details/Details";
-import Header from "./Header/Header";
-import WorkoutCard from "./WorkoutCard";
+import { addToDb, getFromDb } from "../../fakedb";
+import Details from "../Details/Details";
+import Questions from "../Questions/Questions";
+import WorkoutCard from "../WorkoutCard/WorkoutCard";
 
 export default function Homepage() {
   const [workouts, setWorkouts] = useState([]);
   const [exerciseTime, setexerciseTime] = useState(0);
   const [breakTime, setBreakTime] = useState(0);
+  const [quesAns, setQuesAns] = useState([]);
 
   useEffect(() => {
     fetch("workouts.json")
@@ -21,6 +22,17 @@ export default function Homepage() {
   useEffect(() => {
     setBreakTime(getFromDb());
   }, []);
+
+  // questions and answer
+  useEffect(() => {
+    fetch("questions.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setQuesAns(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   // handle add workout button click
   const handleAddClick = (workout) => {
     setexerciseTime((prevexerciseTime) => {
@@ -37,8 +49,8 @@ export default function Homepage() {
 
   return (
     <>
-      <h2 className=" text-2xl font-semibold px-5 mt-10">
-        Your Daily Workouts
+      <h2 className=" text-2xl font-semibold px-5 mt-10 text-red-400">
+        Start Your Daily Workouts
       </h2>
 
       <div className="flex flex-col-reverse md:grid md:grid-cols-12 ">
@@ -62,6 +74,14 @@ export default function Homepage() {
           />
         </div>
       </div>
+      <div className="flex justify-center mt-16 mb-10">
+        <p className="px-5 py-3 border rounded-lg shadow shadow-red-300 drop-shadow text-red-400">
+          Questions
+        </p>
+      </div>
+      {quesAns.map((data) => (
+        <Questions key={data.id} data={data} />
+      ))}
     </>
   );
 }
