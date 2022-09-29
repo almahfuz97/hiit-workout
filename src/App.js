@@ -5,7 +5,7 @@ import Homepage from "./components/Homepage";
 
 function App() {
   return (
-    <div>
+    <div className=" bg-gray-50 ">
       <Homepage />
     </div>
   );
